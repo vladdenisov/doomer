@@ -3,29 +3,33 @@ class Doomer {
     this.$el = typeof selector === 'string' ?
       document.querySelector(selector) :
       selector
+    this.$el.on = this.on
+    this.$el.addClass = this.addClass
+    this.$el.setHTML = this.setHTML
+    this.$el.insertHTML = this.insertHTML
+    this.$el.toggleClass = this.toggleClass
     return this.$el
   }
   setHTML(html) {
-    this.$el.innerHTML = html
+    this.innerHTML = html
     return this
   }
   insertHTML(html) {
-    this.$el.insertAdjacentHTML('beforeend', html)
+    this.insertAdjacentHTML('beforeend', html)
     return this
   }
   on(event, callback) {
-    this.$el.addEventListener(event, callback)
+    this.addEventListener(event, (e) => callback(e))
   }
   toggleClass(name) {
-    if (this.$el.classList.contains(name)) this.$el.classList.remove(name)
-    else this.$el.classList.add(name)
+    if (this.classList.contains(name)) this.classList.remove(name)
+    else this.classList.add(name)
   }
   addClass(name) {
-    this.$el.classList.add(name)
+    this.classList.add(name)
   }
-
-
 }
+
 const $ = (selector) => {
   return new Doomer(selector)
 }
