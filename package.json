@@ -1,0 +1,20 @@
+{
+  "name": "doomerjs",
+  "version": "1.0.0",
+  "description": "Lightweight Dom Operations utility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladdenisov/doomer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladdenisov/doomer/issues"
+  },
+  "homepage": "https://github.com/vladdenisov/doomer#readme"
+}
