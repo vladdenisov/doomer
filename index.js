@@ -8,6 +8,7 @@ class Doomer {
     this.$el.setHTML = this.setHTML
     this.$el.insertHTML = this.insertHTML
     this.$el.toggleClass = this.toggleClass
+    this.$el.clear = this.clear
     return this.$el
   }
   setHTML(html) {
@@ -27,6 +28,10 @@ class Doomer {
   }
   addClass(name) {
     this.classList.add(name)
+  }
+  clear() {
+    this.innerHTML = ''
+    return this
   }
 }
 
